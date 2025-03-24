@@ -64,3 +64,11 @@ if (isMainModule(import.meta.url)) {
  * Request handler used by the Angular CLI (for dev-server and during build) or Firebase Cloud Functions.
  */
 export const reqHandler = createNodeRequestHandler(app);
+import { Route } from '@angular/router';
+
+export function getPrerenderParams(route: Route): { [key: string]: string }[] {
+  if (route.path === 'productDetails/:productId') {
+    return []; // تعطيل العرض المسبق لهذا المسار
+  }
+  return [];
+}
