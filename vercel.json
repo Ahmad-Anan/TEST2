@@ -1,0 +1,5 @@
+{
+    "routes": [
+        { "src": "/productDetails/(.*)", "dest": "/index.html", "headers": { "Cache-Control": "no-store" } }
+    ]
+}
